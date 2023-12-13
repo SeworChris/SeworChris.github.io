@@ -6,6 +6,7 @@
     <style>
         /* Add some basic styling for the clickable panels */
         section {
+            display: none;
             border: 1px solid #ddd;
             padding: 10px;
             margin: 10px;
@@ -16,6 +17,22 @@
             cursor: pointer;
         }
     </style>
+    <script>
+        // JavaScript function to toggle the visibility of sections
+        function toggleSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            // Show the clicked section
+            var clickedSection = document.getElementById(sectionId);
+            if (clickedSection) {
+                clickedSection.style.display = 'block';
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -26,9 +43,9 @@
 
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#experience">Teaching and Research Experience</a></li>
-            <li><a href="#publications">Publications</a></li>
+            <li><a href="javascript:void(0);" onclick="toggleSection('about')">About Me</a></li>
+            <li><a href="javascript:void(0);" onclick="toggleSection('experience')">Teaching and Research Experience</a></li>
+            <li><a href="javascript:void(0);" onclick="toggleSection('publications')">Publications</a></li>
         </ul>
     </nav>
 
