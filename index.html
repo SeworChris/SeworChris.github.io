@@ -85,6 +85,30 @@
             text-decoration: underline;
         }
     </style>
+    <style>
+        .timeline {
+            position: relative;
+        }
+
+        .knot {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .line {
+            width: 2px;
+            height: 100%;
+            background-color: gray;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-1px);
+        }
+    </style>
     <script>
         function toggleSection(sectionId) {
             var sections = document.querySelectorAll('section');
@@ -156,45 +180,25 @@
 <section id="experience">
     <h2>Teaching and Research Experience</h2>
     <div class="timeline">
-        <div class="knot" style="background-color: black;"></div>
+        <div class="knot"></div>
         <div class="entry">
-            <h3>Employment Example 1</h3>
-            <p>
-                Position: [Your Position]<br>
-                Institution: [Institution Name]<br>
-                Duration: [Start Date] - [End Date]
-            </p>
-            <p>
-                Description of your responsibilities and achievements in this role.
-            </p>
+            <!-- Your Employment Example 1 content -->
         </div>
 
-        <div class="knot" style="background-color: black;"></div>
+        <div class="line"></div>
+
+        <div class="knot"></div>
         <div class="entry">
-            <h3>Teaching and Research Experience 1</h3>
-            <p>
-                Institution: [Institution Name]<br>
-                Courses Taught: [List of Courses]<br>
-                Duration: [Start Date] - [End Date]
-            </p>
-            <p>
-                Description of your teaching and research activities in this role.
-            </p>
+            <!-- Your Teaching and Research Experience 1 content -->
         </div>
 
         <!-- Add more entries as needed -->
 
-        <div class="knot" style="background-color: black;"></div>
+        <div class="line"></div>
+
+        <div class="knot"></div>
         <div class="entry">
-            <h3>Teaching and Research Experience N</h3>
-            <p>
-                Institution: [Institution Name]<br>
-                Courses Taught: [List of Courses]<br>
-                Duration: [Start Date] - [End Date]
-            </p>
-            <p>
-                Description of your teaching and research activities in this role.
-            </p>
+            <!-- Your Teaching and Research Experience N content -->
         </div>
     </div>
 </section>
