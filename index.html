@@ -116,7 +116,7 @@ body {
             toggleSection('about');
         };
     </script>
-    <style>
+<style>
         /* Add styles for the sidebar */
         .sidebar {
             background-color: #eaeaea;
@@ -132,6 +132,37 @@ body {
         .content {
             margin-left: 250px;
             padding: 20px;
+            box-sizing: border-box; /* Include padding and border in the width calculation */
+        }
+
+        /* Style for each section */
+        section {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        section:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        /* Style for the publication list */
+        section#publications ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        section#publications li {
+            margin-bottom: 15px;
+        }
+
+        section#publications li:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -274,10 +305,8 @@ body {
         </p>
     </section>
 
-   <section id="publications">
-    <h2>Publications</h2>
-
-    <p>
+    <section id="publications">
+        <h2>Publications</h2>
         <strong>Under Review</strong>
         <ul>
             <li>
@@ -439,7 +468,6 @@ href="https://www.researchgate.net/publication/358266364_Effect_of_ART_on_Cytoki
                 
             </li>    
         </ul>
-    </p>
 </section>
     
  </div>
