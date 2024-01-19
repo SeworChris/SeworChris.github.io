@@ -39,15 +39,17 @@ body {
         }
 
         .container {
-            display: flex;
-            flex: 1;
-        }
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    min-height: 100vh; /* Add min-height to ensure the container takes full height */
+}
 
-        .sidebar {
-            background-color: #eaeaea;
-            padding: 20px;
-            width: 25%;
-        }
+.sidebar {
+    background-color: #eaeaea;
+    padding: 20px;
+    width: 25%;
+    flex-shrink: 0; /* Prevent the sidebar from shrinking */
+}
 
         .content {
             flex: 1;
