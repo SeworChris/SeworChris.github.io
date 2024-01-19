@@ -1,6 +1,4 @@
 
-
-User
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,12 +33,15 @@ User
             margin: 0; /* Remove any default margin */
         }
 
-        header {
+   header {
             background-color: #03465e;
             color: white;
             text-align: center;
             padding: 20px;
+            position: relative;
+            z-index: 1000;
         }
+
 
         h1 {
             margin: 0;
@@ -52,23 +53,22 @@ User
         }
 
     nav {
-    display: flex;
-    justify-content: space-around; /* Align items with equal space between them */
-    align-items: center;
-    background-color: #03465e;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+            display: flex;
+            justify-content: center; /* Center the items horizontally */
+            background-color: #03465e;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
         section {
             background-color: white;
             border: 1px solid #ddd;
@@ -140,18 +140,21 @@ nav a {
 </head>
 
 <body>
-    <div class="sidebar">
-        <h2>Christian Sewor</h2>
+    <header>
+        <h1>Christian Sewor</h1>
         <p>Welcome to my academic profile.</p>
-        <!-- Add any additional profile information you'd like to display -->
-    </div>
+    </header>
     <nav>
         <a href="javascript:void(0);" onclick="toggleSection('about')">About Me</a>
         <a href="javascript:void(0);" onclick="toggleSection('experience')">Teaching and Research Experience</a>
         <a href="javascript:void(0);" onclick="toggleSection('awards')">Awards</a>
         <a href="javascript:void(0);" onclick="toggleSection('publications')">Publications</a>
     </nav>
-        
+    <div class="sidebar">
+        <h2>Christian Sewor</h2>
+        <p>Welcome to my academic profile.</p>
+        <!-- Add any additional profile information you'd like to display -->
+    </div>    
     <section id="about">
         <h2>About Me</h2>
         <p>
