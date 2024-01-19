@@ -1,3 +1,6 @@
+
+
+User
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,20 +51,24 @@
             margin: 10px 0;
         }
 
-        nav {
-            display: flex;
-            background-color: #03465e;
-            padding: 10px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    nav {
+    display: flex;
+    justify-content: space-around; /* Align items with equal space between them */
+    align-items: center;
+    background-color: #03465e;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        nav a {
-            flex: 1;
-            text-align: center;
-        }
-
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
         section {
             background-color: white;
             border: 1px solid #ddd;
@@ -70,7 +77,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             font-size: 18px;
             position: relative;
-            margin-top: 30px; /* Adjust the top margin as needed */
         }
 
         section:hover {
@@ -83,9 +89,9 @@
             content: attr(id);
             display: block;
             position: absolute;
-            left: 50%; /* Center the section name */
+            left: -120px; /* Adjust the position as needed */
             top: 50%;
-            transform: translateX(-50%);
+            transform: translateY(-50%);
             background-color: #03465e;
             color: white;
             padding: 5px;
@@ -145,7 +151,7 @@
         <a href="javascript:void(0);" onclick="toggleSection('awards')">Awards</a>
         <a href="javascript:void(0);" onclick="toggleSection('publications')">Publications</a>
     </nav>
-    
+        
     <section id="about">
         <h2>About Me</h2>
         <p>
