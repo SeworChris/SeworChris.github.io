@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,52 +12,22 @@
             background-color: #f4f4f4;
             color: #333;
             display: flex; /* Use flexbox to create a flex container */
+            flex-direction: row;
+            min-width: 100vw; /* Change to min-width */
         }
-
-        .sidebar {
-            background-color: #eaeaea;
-            padding: 20px;
-            height: 100vh;
-            width: calc(100vw / 4); /* Set the width to one-fourth of the viewport width */
-            margin: 0; /* Remove any default margin */
-            box-sizing: border-box; /* Include padding and border in the width calculation */
-            position: sticky;
-            top: 0;
+    header {
+    background-color: #03465e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
         }
-
-        .content {
-            flex: 1; /* Make the content area take the remaining space */
-            padding: 20px;
-            margin: 0; /* Remove any default margin */
-        }
-
-   header {
-            background-color: #03465e;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            z-index: 1000;
-        }
-
-
-        h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
-    nav {
+        nav {
             display: flex;
-            justify-content: center; /* Center the items horizontally */
+            justify-content: center;
             background-color: #03465e;
             padding: 10px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            width: 100%;
         }
 
         nav a {
@@ -69,6 +37,23 @@
             padding: 10px;
             transition: background-color 0.3s ease;
         }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            background-color: #eaeaea;
+            padding: 20px;
+            width: 25%;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
         section {
             background-color: white;
             border: 1px solid #ddd;
