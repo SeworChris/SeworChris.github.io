@@ -6,27 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Sewor - Academic Profile</title>
     <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex; /* Use flexbox to create a flex container */
-}
-.sidebar {
-    background-color: #eaeaea;
-    padding: 20px;
-    height: 100vh;
-    width: calc(100vw/4); /* Set the width to one-fourth of the viewport width */
-    margin: 0; /* Remove any default margin */
-    box-sizing: border-box; /* Include padding and border in the width calculation */
-}
-.content {
-    flex: 1; /* Make the content area take the remaining space */
-    padding: 0px;
-    margin: 0; /* Remove any default margin */
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex; /* Use flexbox to create a flex container */
+        }
+
+        .sidebar {
+            background-color: #eaeaea;
+            padding: 20px;
+            height: 100vh;
+            width: calc(100vw / 4); /* Set the width to one-fourth of the viewport width */
+            margin: 0; /* Remove any default margin */
+            box-sizing: border-box; /* Include padding and border in the width calculation */
+            position: sticky;
+            top: 0;
+        }
+
+        .content {
+            flex: 1; /* Make the content area take the remaining space */
+            padding: 20px;
+            margin: 0; /* Remove any default margin */
+        }
+
         header {
             background-color: #03465e;
             color: white;
@@ -45,7 +50,8 @@ body {
 
         nav {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
             background-color: #03465e;
             padding: 10px;
             position: sticky;
@@ -60,20 +66,35 @@ body {
             padding: 10px;
             transition: background-color 0.3s ease;
         }
-        
+
         section {
-    background-color: white; /* Set the background color for sections */
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
-}
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            position: relative;
+        }
 
         section:hover {
             cursor: pointer;
             transform: scale(1.02);
             transition: transform 0.3s ease;
+        }
+
+        section::before {
+            content: attr(id);
+            display: block;
+            position: absolute;
+            left: -120px; /* Adjust the position as needed */
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #03465e;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
         }
 
         footer {
@@ -95,6 +116,7 @@ body {
 
         a:hover {
             text-decoration: underline;
+        }
     </style>
     <script>
         function toggleSection(sectionId) {
@@ -113,58 +135,10 @@ body {
             toggleSection('about');
         };
     </script>
-<style>
-        /* Add styles for the sidebar */
-        .sidebar {
-            background-color: #eaeaea;
-            padding: 20px;
-            border-right: 2px solid #ddd;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            height: 100vh;
-        }
-
-        /* Style for the content area */
-        .content {
-            margin-left: 250px;
-            padding: 20px;
-            box-sizing: border-box; /* Include padding and border in the width calculation */
-        }
-
-        /* Style for each section */
-        section {
-            background-color: white;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 10px 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            font-size: 18px;
-        }
-
-        section:hover {
-            cursor: pointer;
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
-        }
-
-        /* Style for the publication list */
-        section#publications ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        section#publications li {
-            margin-bottom: 15px;
-        }
-
-        section#publications li:last-child {
-            margin-bottom: 0;
-        }
-    </style>
 </head>
+
 <body>
-<div class="sidebar">
+    <div class="sidebar">
         <h2>Christian Sewor</h2>
         <p>Welcome to my academic profile.</p>
         <!-- Add any additional profile information you'd like to display -->
