@@ -84,6 +84,28 @@
         a:hover {
             text-decoration: underline;
         }
+        body {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #03465e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
     </style>
     <script>
         function toggleSection(sectionId) {
