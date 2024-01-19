@@ -83,22 +83,6 @@
 
         a:hover {
             text-decoration: underline;
-        }
-        .sidebar {
-            width: 20%;
-            background-color: #03465e;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-        }
-
-        main {
-            flex: 1;
-            padding: 20px;
-        }
 
     </style>
     <script>
@@ -120,8 +104,8 @@
     </script>
 </head>
 
-<body>
-     <div class="sidebar">
+<body class="about-page">
+    <div class="sidebar">
         <h2>Christian Sewor</h2>
         <p>Welcome to my academic profile.</p>
         <!-- Add any additional profile information you'd like to display -->
@@ -424,6 +408,24 @@ href="https://www.researchgate.net/publication/358266364_Effect_of_ART_on_Cytoki
         </ul>
     </p>
 </section>
+<style>
+        body.about-page {
+            position: relative;
+        }
+
+        .sidebar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px; /* Adjust the width as needed */
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        /* Add any additional styling for the sidebar */
+    </style>
                 
 </body>
 
