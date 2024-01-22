@@ -12,33 +12,52 @@ body {
     background-color: #f4f4f4;
     color: #333;
     display: flex;
-    flex-direction: column; /* Change flex direction to column */
-    min-height: 100vh; /* Change to min-height for full-height layout */
+    flex-direction: column;
+    min-height: 100vh;
 }
-    header {
-    width: 100%;
-    height: 12.5vh; /* Set the height to 1/8th of the viewport height */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+header {
+    width: 12.5%; /* Set the width of the header to 12.5% of the viewport width */
     background-color: #03465e;
     color: white;
     text-align: center;
     padding: 20px;
-    width: 100%;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #03465e;
-            padding: 10px;
-            width: 100%;
-        }
+}
 
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            padding: 10px;
-            transition: background-color 0.3s ease;
-        }
+.sidebar {
+    padding: 20px;
+    width: 12.5%; /* Set the width of the sidebar to 12.5% of the viewport width */
+    background-color: #03465e;
+    color: white;
+    line-height: 0.5;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #03465e;
+    padding: 10px;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
     .container {
     display: flex;
     flex-direction: row; /* Change flex direction back to row */
