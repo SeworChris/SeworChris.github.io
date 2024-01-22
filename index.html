@@ -47,31 +47,49 @@ body {
 }
 
         /* Apply styles to the .sidebar class */
-      .sidebar {
+      .listing-profile {
             padding: 20px;
-            width: 25%;
-            background-color: #03465e; /* Match the background color of the header */
-            color: white; /* Match the text color of the header */
-            line-height: 0.5;
-            margin-top: -5vh; 
-        }
-        .container {
-            display: flex;
-            flex-direction: row;
-            min-height: 100vh;
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-             }
-
-        /* Apply styles to the text within the .sidebar class */
-        .sidebar h2 {
-            font-size: 16px;
-            margin-bottom:0.5px;
+            background-color: #03465e;
+            color: white;
+            text-align: center;
         }
 
-        .sidebar p {
-            font-size: 12px;
-            margin-bottom: 8px;
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+
+        .profile-name {
+            margin-bottom: 10px;
+        }
+
+        .name {
+            margin: 0;
+        }
+
+        .title,
+        .department {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .profile-contact {
+            text-align: left;
+        }
+
+        .office {
+            margin: 0;
+        }
+
+        .email,
+        .phone,
+        .website {
+            display: block;
+            margin: 5px 0;
         }
 
         /* Apply styles to the .content class */
@@ -160,31 +178,28 @@ body {
 
 <body>
     <header>
-       <div class="sidebar">
-        <h2>Christian Sewor</h2>
-        <p>PhD Student</p>
-        <p>Department of Environmental and Radiological Health Sciences</p>
-        <p>Colorado State University, Fort Collins, CO, USA</p>
-        <p> <a href="mailto:christian.sewor@colostate.edu;seworchristian@gmail.com">
-                <img class="icon" src="https://raw.githubusercontent.com/SeworChris/SeworChris.github.io/master/email.png" alt="Email">
-</a>
-            </a> <a href="https://orcid.org/0000-0003-1155-4730" target="_blank">
-    <img class="icon" src="https://raw.githubusercontent.com/SeworChris/SeworChris.github.io/master/OrcId.png" alt="ORCID">
-</a>
-            </a>
-            <a href="https://scholar.google.com/citations?user=FKAAZQkAAAAJ&hl=en" target="_blank">
-                <img class="icon" src="https://raw.githubusercontent.com/SeworChris/SeworChris.github.io/master/Googlescholar.png" alt="Google Scholar">
-            </a>
-            <a href="https://www.researchgate.net/profile/Christian_Sewor" target="_blank">
-                <img class="icon" src="https://raw.githubusercontent.com/SeworChris/SeworChris.github.io/master/researchgate.png" alt="Research Gate">
-            </a>
-       <a href="https://twitter.com/SeworChristian3" target="_blank">
-                <img class="icon" src="https://raw.githubusercontent.com/SeworChris/SeworChris.github.io/master/X.png" alt="Twitter">
-            </a>
-          <a href="https://www.linkedin.com/in/christian-sewor-63576a105/" target="_blank">
-                <img class="icon" src="https://raw.githubusercontent.com/SeworChris/SeworChris.github.io/master/linkedIn.png" alt="LinkedIn">
-            </p>
-    </div> 
+        <div class="listing-profile">
+            <div class="profile-photo"
+                style="background-image:url(https://raw.githubusercontent.com/SeworChris/SeworChris.github.io/master/email.png);">
+            </div>
+            <div class="profile-name">
+                <h1 class="name">Christian Sewor</h1>
+                <span class="title">PhD Student</span>
+                <span class="department">Department of Environmental and Radiological Health Sciences</span>
+                <span class="department">Colorado State University, Fort Collins, CO, USA</span>
+            </div>
+            <div class="profile-contact">
+                <p><a href="mailto:christian.sewor@colostate.edu;seworchristian@gmail.com" class="email">Email</a></p>
+                <p><a href="https://orcid.org/0000-0003-1155-4730" target="_blank" class="website">ORCID</a></p>
+                <p><a href="https://scholar.google.com/citations?user=FKAAZQkAAAAJ&hl=en" target="_blank"
+                        class="website">Google Scholar</a></p>
+                <p><a href="https://www.researchgate.net/profile/Christian_Sewor" target="_blank" class="website">Research
+                        Gate</a></p>
+                <p><a href="https://twitter.com/SeworChristian3" target="_blank" class="website">Twitter</a></p>
+                <p><a href="https://www.linkedin.com/in/christian-sewor-63576a105/" target="_blank"
+                        class="website">LinkedIn</a></p>
+            </div>
+        </div>
     </header>
     <nav>
         <a href="javascript:void(0);" onclick="toggleSection('about')">About Me</a>
